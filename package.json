@@ -1,9 +1,9 @@
 {
-  "name": "my-gatsby-site",
+  "name": "personal-website-gatsby",
   "version": "1.0.0",
   "private": true,
-  "description": "My Gatsby Site",
-  "author": "xdemocle",
+  "description": "My Gatsby personal website",
+  "author": "xdemocle@gmail.com",
   "keywords": [
     "gatsby"
   ],
