@@ -130,6 +130,13 @@ const IndexPage = () => {
         </a>{" "}
         /{" "}
         <a
+          href="https://calendly.com/rocco-russo"
+          title="Want to book 30 minute meeting with me free of charge?"
+        >
+          Calendly
+        </a>{" "}
+        /{" "}
+        <a
           href="https://www.16personalities.com/profiles/cd1f69fbbefd8"
           title="Visit my ENFJ-A Assertive Protagonist profile"
         >
@@ -153,6 +160,10 @@ const IndexPage = () => {
           class="skype"
         >
           Skype
+        </a>{" "}
+        /{" "}
+        <a href="https://www.twine.net/roccor" title="Twine profile">
+          Twine
         </a>
       </p>
 
@@ -209,7 +220,11 @@ const IndexPage = () => {
           href="mailto:im@rocco.me?subject=Inquiry from website"
           class="hire-me"
         >
-          Want to hire me?
+          Want to drop me an e-mail?
+        </a>{" "}
+        /{" "}
+        <a href="https://calendly.com/rocco-russo" class="hire-me">
+          Want to book 30 minute meeting with me free of charge?
         </a>
       </p>
       <p>
