@@ -314,7 +314,6 @@ const IndexPage = () => {
           <span style={striked}>Sort of Single</span> / Electronic / Power Metal
           / Punk Rock / Blues / Enduro / #endurolife / Supermotard / Supermoto /
           No limits / No excuses.
-          
           <p>
             <a
               href="mailto:im@rocco.me?subject=Inquiry from website"
@@ -331,8 +330,8 @@ const IndexPage = () => {
 
         <p>
           Hosted on{' '}
-          <a href="https://github.com" title="GitHub">
-            GitHub
+          <a href="https://cloudflare.com" title="Cloudflare">
+            Cloudflare
           </a>{' '}
           | Made with{' '}
           <a
