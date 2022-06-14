@@ -1,0 +1,11 @@
+.calendly-button-link {
+  all: unset;
+  cursor: pointer;
+  color: #fec514;
+  text-decoration: underline;
+}
+
+.calendly-button-link:hover {
+  color: #fec514;
+  text-decoration: none;
+}
