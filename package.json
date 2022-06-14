@@ -28,7 +28,6 @@
     "gatsby-plugin-styled-components": "^5.16.0",
     "gatsby-source-filesystem": "^4.16.0",
     "react": "^18.1.0",
-    "react-calendly": "^4.0.1",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.3.5",

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Typewriter from 'typewriter-effect';
-import { PopupButton } from 'react-calendly';
 import useBreakpoint from 'use-breakpoint';
 import '../styles/typography.css';
 import '../styles/layout.css';
@@ -232,22 +231,12 @@ const IndexPage = () => {
             LinkedIn
           </a>{' '}
           /{' '}
-          {/* <a
+          <a
             href="https://calendly.com/rocco-russo"
             title="Want to book 30 minute meeting with me free of charge?"
           >
             Calendly
-          </a>{' '} */}
-          <PopupButton
-            url="https://calendly.com/rocco-russo"
-            /*
-             * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
-             * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
-             */
-            rootElement={document.getElementById('popup-calendly')}
-            text="Calendly"
-            className="calendly-button-link"
-          />{' '}
+          </a>{' '}
           /{' '}
           <a
             href="https://www.16personalities.com/profiles/cd1f69fbbefd8"
@@ -325,6 +314,7 @@ const IndexPage = () => {
           <span style={striked}>Sort of Single</span> / Electronic / Power Metal
           / Punk Rock / Blues / Enduro / #endurolife / Supermotard / Supermoto /
           No limits / No excuses.
+          
           <p>
             <a
               href="mailto:im@rocco.me?subject=Inquiry from website"
@@ -333,16 +323,9 @@ const IndexPage = () => {
               Want to drop me an e-mail?
             </a>
             <br />
-            <PopupButton
-              url="https://calendly.com/rocco-russo"
-              /*
-               * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
-               * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
-               */
-              rootElement={document.getElementById('popup-calendly')}
-              text="Want to book 30 minute meeting with me free of charge?"
-              className="calendly-button-link"
-            />{' '}
+            <a href="https://calendly.com/rocco-russo" className="hire-me">
+              Want to book 30 minute meeting with me free of charge?
+            </a>
           </p>
         </div>
 
