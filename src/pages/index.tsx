@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Typewriter from 'typewriter-effect';
-import useBreakpoint from 'use-breakpoint';
+import styled from 'styled-components';
 import '../styles/typography.css';
 import '../styles/layout.css';
 import '../styles/thirdparty.css';
-import { BREAKPOINTS } from '../constants';
 
 // styles
 const pageStyles = {
@@ -28,24 +27,23 @@ const headingStyles = {
 };
 
 const headingAccentStyles = {
-  color: '#ffffff',
   fontSize: '2.3rem',
   lineHeight: '3rem',
 };
 
-const paragraphStyles = {
-  marginTop: '3rem',
-  marginBottom: '5rem',
-  marginLeft: '12rem',
-  lineHeight: '1.7rem',
-};
+const ParagraphStyled = styled.div`
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.7rem;
+  text-align: center;
 
-const paragraphStylesMobile = {
-  marginBottom: '5rem',
-  marginLeft: '0',
-  lineHeight: '1.7rem',
-  textAlign: 'center',
-};
+  @media (min-width: 1024px) {
+    margin-left: 12rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+`;
 
 const striked = {
   textDecoration: 'line-through',
@@ -93,11 +91,6 @@ const striked = {
 // };
 
 const IndexPage = () => {
-  const { breakpoint, maxWidth, minWidth } = useBreakpoint(
-    BREAKPOINTS,
-    'desktop'
-  );
-
   return (
     <>
       <Helmet title="Home Page" defer={false}>
@@ -219,7 +212,7 @@ const IndexPage = () => {
           </div>
         </h1>
 
-        <div>
+        <ParagraphStyled>
           <a href="https://github.com/xdemocle" title="Visit my GitHub profile">
             GitHub
           </a>{' '}
@@ -263,32 +256,28 @@ const IndexPage = () => {
           <a href="https://www.twine.net/roccor" title="Twine profile">
             Twine
           </a>
-        </div>
+        </ParagraphStyled>
 
-        <div
-          style={
-            breakpoint === 'mobile' || breakpoint === 'tablet'
-              ? paragraphStylesMobile
-              : paragraphStyles
-          }
-        >
+        <ParagraphStyled>
           Freelance / <span style={striked}>Amsterdam</span> /{' '}
-          <span style={striked}>Barcelona</span> / Spain /{' '}
+          <span style={striked}>Barcelona</span> /{' '}
+          <span style={striked}>Spain</span> / South Africa /{' '}
           <span style={striked}>Malta</span> /{' '}
-          <span style={striked}>Belgium</span> / HTML / CSS / JavaScript / SPA /{' '}
-          <span className="striked removed-skill">Drupal</span> / Theming /{' '}
-          CoffeeScript / SASS / Webpack / LESS / AngularJS / Templating / React
-          / Vue.js / Redux / GraphQL /{' '}
+          <span style={striked}>Belgium</span> / HTML / CSS / JavaScript / React
+          / SPA / <span className="striked removed-skill">Drupal</span> /
+          Theming / CoffeeScript / SASS / Webpack / LESS / AngularJS / Web3 /
+          Blockchain / Crypto / Bitcoin / Ethereum / Templating / Vue.js / Redux
+          / GraphQL /{' '}
           <a href="https://medium.com/@amitmojumder/front-end-engineer-differs-from-front-end-developer-68efe13fce7b">
             Front-End Web Developer VS Front-End Web Engineer
           </a>{' '}
-          / PhoneGap / Cordova /{' '}
+          / React Native / PhoneGap / Cordova /{' '}
           <span className="harsh">
             Don't send me e-mail about permanent positions in Holland or UK, or
             I will scratch your car!!! /
           </span>{' '}
           Node.js / Yeoman / cross-browser / Grunt / Gulp / Client-side / Nginx
-          / Apache / Comanche / Cheyenne / Sitting /{' '}
+          / Apache / Comanche / Cheyenne / Sitting / Next.js / Gatsby.js /{' '}
           <span className="striked removed-skill">PHP</span> / Bull / Pizza /
           Pasta / Mafia / Mandolino / South Italy /{' '}
           <span className="harsh">
@@ -297,8 +286,9 @@ const IndexPage = () => {
           I hate seafood / Minimal Style / I hate pizza made abroad but I cannot
           avoid IT, otherwise I could become extinct / I hate ﬁsh in general / I
           hate who hates / Sometime I hate also myself / Slowpoke / if you read
-          that far, means you don't have that much to do :P / Bower / GIT /{' '}
-          <span className="striked removed-skill">SVN</span>/{' '}
+          that far, means you don't have that much to do :P / Bower / GIT /
+          GitHub / GitLab / BitBucket /{' '}
+          <span className="striked removed-skill">SVN</span> /{' '}
           <span className="harsh">I wrote these bullshits at 2am /</span> OOP /
           AJAX / REST / I'm Batman / Redis Cache / MongoDB / I played american
           football in Italy and I hate who thinks rugby is better... /{' '}
@@ -326,21 +316,21 @@ const IndexPage = () => {
               Want to book 30 minute meeting with me free of charge?
             </a>
           </p>
-        </div>
+        </ParagraphStyled>
 
-        <p>
+        <ParagraphStyled>
           Hosted on{' '}
           <a href="https://cloudflare.com" title="Cloudflare">
             Cloudflare
           </a>{' '}
           | Made with{' '}
           <a
-            href="https://www.google.com/search?q=zen+mind+full"
+            href="https://www.google.com/search?q=full+zen+mind"
             title="Search on Google.. I don't know what it does mean :D"
           >
-            Zen Mind Full
+            Full Zen Mind
           </a>
-        </p>
+        </ParagraphStyled>
       </main>
       <div id="popup-calendly"></div>
     </>
