@@ -6,30 +6,21 @@ import '../styles/typography.css';
 import '../styles/layout.css';
 import '../styles/thirdparty.css';
 
-// styles
-const pageStyles = {
-  minHeight: '100vh',
-  maxWidth: '80rem',
-  padding: '5rem',
-  margin: '0',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-  textAlign: 'right',
-};
+// styled
+const PageStyled = styled.main`
+  min-height: 100vh;
+  max-width: 80rem;
+  padding: 1rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif, serif;
+  text-align: 'right';
+  text-align: center;
 
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  fontFamily: 'AlternateGotNo3D, -apple-system, Roboto, sans-serif, serif',
-  textTransform: 'uppercase',
-  fontSize: '6rem',
-  fontWeight: 100,
-  lineHeight: '5rem',
-};
-
-const headingAccentStyles = {
-  fontSize: '2.3rem',
-  lineHeight: '3rem',
-};
+  @media (min-width: 1024px) {
+    padding: 5rem;
+    text-align: right;
+  }
+`;
 
 const ParagraphStyled = styled.div`
   margin-top: 0.5rem;
@@ -44,6 +35,22 @@ const ParagraphStyled = styled.div`
     text-align: right;
   }
 `;
+
+// styles
+const headingStyles = {
+  marginTop: 0,
+  marginBottom: 64,
+  fontFamily: 'AlternateGotNo3D, -apple-system, Roboto, sans-serif, serif',
+  textTransform: 'uppercase',
+  fontSize: '6rem',
+  fontWeight: 100,
+  lineHeight: '5rem',
+};
+
+const headingAccentStyles = {
+  fontSize: '2.3rem',
+  lineHeight: '3rem',
+};
 
 const striked = {
   textDecoration: 'line-through',
@@ -170,14 +177,7 @@ const IndexPage = () => {
         <meta name="theme-color" content="#663399" />
       </Helmet>
 
-      <main
-        style={
-          pageStyles as React.DetailedHTMLProps<
-            React.HTMLAttributes<HTMLHeadingElement>,
-            HTMLHeadingElement
-          >
-        }
-      >
+      <PageStyled>
         <h1
           style={
             headingStyles as React.DetailedHTMLProps<
@@ -331,7 +331,7 @@ const IndexPage = () => {
             Full Zen Mind
           </a>
         </ParagraphStyled>
-      </main>
+      </PageStyled>
       <div id="popup-calendly"></div>
     </>
   );
