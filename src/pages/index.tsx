@@ -102,7 +102,7 @@ const IndexPage = () => {
     <>
       <Helmet title="Rocco Russo | Gatsby personal website" defer={false}>
         <title>Rocco Russo | Gatsby personal website</title>
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="57x57"
           href="/apple-icon-57x57.png"
@@ -172,8 +172,8 @@ const IndexPage = () => {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" /> */}
         <meta name="msapplication-TileColor" content="#663399" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#663399" />
       </Helmet>
 
@@ -332,7 +332,7 @@ const IndexPage = () => {
           </a>
         </ParagraphStyled>
       </PageStyled>
-      <div id="popup-calendly"></div>
+      {/* <div id="popup-calendly"></div> */}
     </>
   );
 };
