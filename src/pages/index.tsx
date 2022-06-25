@@ -100,8 +100,8 @@ const striked = {
 const IndexPage = () => {
   return (
     <>
-      <Helmet title="Home Page" defer={false}>
-        <title>Home page</title>
+      <Helmet title="Rocco Russo | Gatsby personal website" defer={false}>
+        <title>Rocco Russo | Gatsby personal website</title>
         <link
           rel="apple-touch-icon"
           sizes="57x57"
