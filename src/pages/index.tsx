@@ -232,6 +232,13 @@ const IndexPage = () => {
           </a>{' '}
           /{' '}
           <a
+            href="https://www.meetup.com/Cape-Town-ReactJS-Meetup"
+            title="Visit Cape Town ReactJS Meetup"
+          >
+            CT ReactJS Meetup
+          </a>{' '}
+          /{' '}
+          <a
             href="https://www.16personalities.com/profiles/cd1f69fbbefd8"
             title="Visit my ENFJ-A Assertive Protagonist profile"
           >
@@ -323,12 +330,11 @@ const IndexPage = () => {
           <a href="https://cloudflare.com" title="Cloudflare">
             Cloudflare
           </a>{' '}
-          | Made with{' '}
+          | Made by{' '}
           <a
-            href="https://www.google.com/search?q=full+zen+mind"
-            title="Search on Google.. I don't know what it does mean :D"
+            href="http://theweb3.ninja/"
           >
-            Full Zen Mind
+            The Web3 Ninja
           </a>
         </ParagraphStyled>
       </PageStyled>
