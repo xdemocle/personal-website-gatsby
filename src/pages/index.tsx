@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import '../styles/typography.css';
 import '../styles/layout.css';
 import '../styles/thirdparty.css';
+import '../styles/spinner.css';
 
 // styled
 const PageStyled = styled.main`
@@ -104,8 +105,11 @@ type StarredRepoType = {
 };
 
 const IndexPage = () => {
+  const [loading, setLoading] = React.useState(true);
   const [starredRepos, setStarredRepo] = React.useState<StarredRepoType[]>([]);
+
   const getStarredRepositories = async () => {
+    setLoading(true);
     const repositories: StarredRepoType[] = [];
 
     const response = await fetch(
@@ -121,6 +125,7 @@ const IndexPage = () => {
       });
     });
 
+    setLoading(false);
     setStarredRepo(repositories);
   };
 
@@ -357,6 +362,12 @@ const IndexPage = () => {
 
         <ParagraphStyled>
           <h3>My latest 100 starred repositories on Github:</h3>
+
+          {loading && (
+            <div className="lds-heart">
+              <div></div>
+            </div>
+          )}
 
           <div style={{ lineHeight: '2rem' }}>
             {starredRepos.map((repo, ix) => (
