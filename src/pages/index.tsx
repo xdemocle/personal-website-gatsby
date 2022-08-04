@@ -2,16 +2,9 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Typewriter from 'typewriter-effect';
 import styled from 'styled-components';
-import { Octokit } from '@octokit/core';
 import '../styles/typography.css';
 import '../styles/layout.css';
 import '../styles/thirdparty.css';
-import { start } from 'repl';
-import { execPath } from 'process';
-
-const octokit = new Octokit({
-  auth: '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',
-});
 
 // styled
 const PageStyled = styled.main`
