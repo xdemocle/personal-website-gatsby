@@ -2,9 +2,16 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Typewriter from 'typewriter-effect';
 import styled from 'styled-components';
+import { Octokit } from '@octokit/core';
 import '../styles/typography.css';
 import '../styles/layout.css';
 import '../styles/thirdparty.css';
+import { start } from 'repl';
+import { execPath } from 'process';
+
+const octokit = new Octokit({
+  auth: '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',
+});
 
 // styled
 const PageStyled = styled.main`
@@ -97,7 +104,37 @@ const striked = {
 //   color: "#8954A8",
 // };
 
+type StarredRepoType = {
+  name: string;
+  url: string;
+  description: string | null;
+};
+
 const IndexPage = () => {
+  const [starredRepos, setStarredRepo] = React.useState<StarredRepoType[]>([]);
+  const getStarredRepositories = async () => {
+    const repositories: StarredRepoType[] = [];
+
+    const response = await fetch(
+      'https://api.github.com/users/xdemocle/starred?per_page=100'
+    );
+    const repos = await response.json();
+
+    repos.forEach((repo: { name: any; html_url: any; description: any }) => {
+      repositories.push({
+        name: repo.name,
+        url: repo.html_url,
+        description: repo.description,
+      });
+    });
+
+    setStarredRepo(repositories);
+  };
+
+  React.useEffect(() => {
+    getStarredRepositories();
+  }, []);
+
   return (
     <>
       <Helmet title="Rocco Russo | Gatsby personal website" defer={false}>
@@ -326,16 +363,31 @@ const IndexPage = () => {
         </ParagraphStyled>
 
         <ParagraphStyled>
+          <h3>My latest 100 starred repositories on Github:</h3>
+
+          <div style={{ lineHeight: '2rem' }}>
+            {starredRepos.map((repo, ix) => (
+              <>
+                <a
+                  href={repo.url}
+                  target="_blank"
+                  title={repo.description || ''}
+                  key={`${repo.name}-${ix}`}
+                >
+                  {repo.name}
+                </a>{' '}
+                {ix + 1 !== starredRepos.length && '/ '}
+              </>
+            ))}
+          </div>
+        </ParagraphStyled>
+
+        <ParagraphStyled>
           Hosted on{' '}
           <a href="https://cloudflare.com" title="Cloudflare">
             Cloudflare
           </a>{' '}
-          | Made by{' '}
-          <a
-            href="http://theweb3.ninja/"
-          >
-            The Web3 Ninja
-          </a>
+          | Made by <a href="http://theweb3.ninja/">The Web3 Ninja</a>
         </ParagraphStyled>
       </PageStyled>
       {/* <div id="popup-calendly"></div> */}
