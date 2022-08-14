@@ -57,6 +57,10 @@ const striked = {
   textDecoration: 'line-through',
 };
 
+const Harsh  = styled.span`
+  font-style: italic;
+`
+
 // const codeStyles = {
 //   color: "#8A6534",
 //   padding: 4,
@@ -132,6 +136,8 @@ const IndexPage = () => {
   React.useEffect(() => {
     getStarredRepositories();
   }, []);
+
+  const yearBorn = new Date().getFullYear() - 1982;
 
   return (
     <>
@@ -306,7 +312,7 @@ const IndexPage = () => {
           <span style={striked}>Spain</span> / South Africa /{' '}
           <span style={striked}>Malta</span> /{' '}
           <span style={striked}>Belgium</span> / HTML / CSS / JavaScript / React
-          / SPA / <span className="striked removed-skill">Drupal</span> /
+          / TypeScript / SPA / <span style={striked}>Drupal</span> /
           Theming / CoffeeScript / SASS / Webpack / LESS / AngularJS / Web3 /
           Blockchain / Crypto / Bitcoin / Ethereum / Templating / Vue.js / Redux
           / GraphQL /{' '}
@@ -314,38 +320,38 @@ const IndexPage = () => {
             Front-End Web Developer VS Front-End Web Engineer
           </a>{' '}
           / React Native / PhoneGap / Cordova /{' '}
-          <span className="harsh">
+          <Harsh>
             Don't send me e-mail about permanent positions in Holland or UK, or
             I will scratch your car!!! /
-          </span>{' '}
+          </Harsh>{' '}
           Node.js / Yeoman / cross-browser / Grunt / Gulp / Client-side / Nginx
-          / Apache / Comanche / Cheyenne / Sitting / Next.js / Gatsby.js /{' '}
-          <span className="striked removed-skill">PHP</span> / Bull / Pizza /
+          / Apache / Comanche / Cheyenne / Sitting Bull / Next.js / Gatsby.js /{' '}
+          <span style={striked}>PHP</span> / Bull / Pizza /
           Pasta / Mafia / Mandolino / South Italy /{' '}
-          <span className="harsh">
+          <Harsh>
             Sir, Do You Have a Moment to Talk About Jesus Christ? /
-          </span>{' '}
+          </Harsh>{' '}
           I hate seafood / Minimal Style / I hate pizza made abroad but I cannot
           avoid IT, otherwise I could become extinct / I hate ﬁsh in general / I
           hate who hates / Sometime I hate also myself / Slowpoke / if you read
           that far, means you don't have that much to do :P / Bower / GIT /
           GitHub / GitLab / BitBucket /{' '}
           <span className="striked removed-skill">SVN</span> /{' '}
-          <span className="harsh">I wrote these bullshits at 2am /</span> OOP /
+          <Harsh>I wrote these bullshits at 2am</Harsh> / OOP /
           AJAX / REST / I'm Batman / Redis Cache / MongoDB / I played american
           football in Italy and I hate who thinks rugby is better... /{' '}
-          <span className="harsh">
+          <Harsh>
             <span style={striked}>
               I have a motorbike in Holland, brought from Malta and bought in
               Sicily... still have to fix it, i'm worried cause I could run away
               from the shitty weather
             </span>{' '}
-            /
-          </span>
-          <span id="yearsOld">39</span> /{' '}
+          </Harsh>
+          /{' '}
+          <span>{yearBorn}</span> /{' '}
           <span style={striked}>Sort of Single</span> / Electronic / Power Metal
           / Punk Rock / Blues / Enduro / #endurolife / Supermotard / Supermoto /
-          No limits / No excuses.
+          No limits / No excuses / Father.
           <p>
             <a
               href="mailto:im@rocco.me?subject=Inquiry from website"
