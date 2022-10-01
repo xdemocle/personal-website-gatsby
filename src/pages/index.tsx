@@ -294,6 +294,13 @@ const IndexPage = () => {
           </a>{' '}
           /{' '}
           <a
+            href="https://instagram.com/roc_71"
+            title="Visit my Instagram profile"
+          >
+            Instagram
+          </a>{' '}
+          /{' '}
+          <a
             href="skype:democle?chat"
             title="Chat with me on Skype"
             className="skype"
