@@ -1,106 +1,12 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Typewriter from 'typewriter-effect';
-import styled from 'styled-components';
 import '../styles/typography.css';
 import '../styles/layout.css';
 import '../styles/thirdparty.css';
 import '../styles/spinner.css';
+import { Harsh, headingAccentStyles, headingStyles, PageStyled, ParagraphStyled, striked } from '../styled';
 
-// styled
-const PageStyled = styled.main`
-  min-height: 100vh;
-  max-width: 80rem;
-  padding: 1rem;
-  margin: 0;
-  font-family: 'Roboto', sans-serif, serif;
-  text-align: 'right';
-  text-align: center;
-
-  @media (min-width: 1024px) {
-    padding: 5rem;
-    text-align: right;
-  }
-`;
-
-const ParagraphStyled = styled.div`
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.7rem;
-  text-align: center;
-
-  @media (min-width: 1024px) {
-    margin-left: 12rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    text-align: right;
-  }
-`;
-
-// styles
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  fontFamily: 'AlternateGotNo3D, -apple-system, Roboto, sans-serif, serif',
-  textTransform: 'uppercase',
-  fontSize: '6rem',
-  fontWeight: 100,
-  lineHeight: '5rem',
-};
-
-const headingAccentStyles = {
-  fontSize: '2.3rem',
-  lineHeight: '3rem',
-};
-
-const striked = {
-  textDecoration: 'line-through',
-};
-
-const Harsh  = styled.span`
-  font-style: italic;
-`
-
-// const codeStyles = {
-//   color: "#8A6534",
-//   padding: 4,
-//   backgroundColor: "#FFF4DB",
-//   fontSize: "1.25rem",
-//   borderRadius: 4,
-// };
-// const listStyles = {
-//   marginBottom: 96,
-//   paddingLeft: 0,
-// };
-// const listItemStyles = {
-//   fontWeight: "300",
-//   fontSize: "24px",
-//   maxWidth: "560px",
-// };
-
-// const linkStyle = {
-//   color: "#8954A8",
-//   fontWeight: "bold",
-//   fontSize: "16px",
-//   verticalAlign: "5%",
-// };
-
-// const docLinkStyle = {
-//   ...linkStyle,
-//   listStyleType: "none",
-//   marginBottom: 24,
-// };
-
-// const descriptionStyle = {
-//   color: "#232129",
-//   fontSize: "14px",
-// };
-
-// const docLink = {
-//   text: "Documentation",
-//   url: "https://www.gatsbyjs.com/docs/",
-//   color: "#8954A8",
-// };
 
 type StarredRepoType = {
   name: string;
@@ -254,61 +160,64 @@ const IndexPage = () => {
         </h1>
 
         <ParagraphStyled>
-          <a href="https://github.com/xdemocle" title="Visit my GitHub profile">
+          <a target="blank"  href="https://mirror.xyz/0xb0832e423881bc0371352CFDF189a3B61af1b97B" title="Visit my Blog">
+            My Blog
+          </a>{' '}
+          /{' '}
+          <a target="blank"  href="https://github.com/xdemocle" title="Visit my GitHub profile">
             GitHub
           </a>{' '}
           /{' '}
-          <a
+          <a target="blank" 
             href="https://www.linkedin.com/in/roccorusso"
             title="Visit my LinkedIn profile"
           >
             LinkedIn
           </a>{' '}
           /{' '}
-          <a
+          <a target="blank" 
             href="https://calendly.com/rocco-russo"
             title="Want to book 30 minute meeting with me free of charge?"
           >
             Calendly
           </a>{' '}
           /{' '}
-          <a
+          <a target="blank" 
             href="https://www.meetup.com/Cape-Town-ReactJS-Meetup"
             title="Visit Cape Town ReactJS Meetup"
           >
             CT ReactJS Meetup
           </a>{' '}
           /{' '}
-          <a
+          <a target="blank" 
             href="https://www.16personalities.com/profiles/cd1f69fbbefd8"
             title="Visit my ENFJ-A Assertive Protagonist profile"
           >
             ENFJ-A
           </a>{' '}
           /{' '}
-          <a
+          <a target="blank" 
             href="https://twitter.com/xdemocle"
             title="Visit my Twitter profile"
           >
             Twitter
           </a>{' '}
           /{' '}
-          <a
+          <a target="blank" 
+            href="https://www.facebook.com/xdemocle"
+            title="Visit my Facebook profile"
+          >
+            Facebook
+          </a>{' '}
+          /{' '}
+          <a target="blank" 
             href="https://instagram.com/roc_71"
             title="Visit my Instagram profile"
           >
             Instagram
           </a>{' '}
           /{' '}
-          <a
-            href="skype:democle?chat"
-            title="Chat with me on Skype"
-            className="skype"
-          >
-            Skype
-          </a>{' '}
-          /{' '}
-          <a href="https://www.twine.net/roccor" title="Twine profile">
+          <a target="blank"  href="https://www.twine.net/roccor" title="Twine profile">
             Twine
           </a>
         </ParagraphStyled>
@@ -323,7 +232,7 @@ const IndexPage = () => {
           Theming / CoffeeScript / SASS / Webpack / LESS / AngularJS / Web3 /
           Blockchain / Crypto / Bitcoin / Ethereum / Templating / Vue.js / Redux
           / GraphQL /{' '}
-          <a href="https://medium.com/@amitmojumder/front-end-engineer-differs-from-front-end-developer-68efe13fce7b">
+          <a target="blank"  href="https://medium.com/@amitmojumder/front-end-engineer-differs-from-front-end-developer-68efe13fce7b">
             Front-End Web Developer VS Front-End Web Engineer
           </a>{' '}
           / React Native / PhoneGap / Cordova /{' '}
@@ -360,14 +269,14 @@ const IndexPage = () => {
           / Punk Rock / Blues / Enduro / #endurolife / Supermotard / Supermoto /
           No limits / No excuses / Father.
           <p>
-            <a
+            <a target="blank" 
               href="mailto:im@rocco.me?subject=Inquiry from website"
               className="hire-me"
             >
               Want to drop me an e-mail?
             </a>
             <br />
-            <a href="https://calendly.com/rocco-russo" className="hire-me">
+            <a target="blank"  href="https://calendly.com/rocco-russo" className="hire-me">
               Want to book 30 minute meeting with me free of charge?
             </a>
           </p>
@@ -385,7 +294,7 @@ const IndexPage = () => {
           <div style={{ lineHeight: '2rem' }}>
             {starredRepos.map((repo, ix) => (
               <>
-                <a
+                <a target="blank" 
                   href={repo.url}
                   target="_blank"
                   title={repo.description || ''}
@@ -401,10 +310,10 @@ const IndexPage = () => {
 
         <ParagraphStyled>
           Hosted on{' '}
-          <a href="https://cloudflare.com" title="Cloudflare">
+          <a target="blank"  href="https://cloudflare.com" title="Cloudflare">
             Cloudflare
           </a>{' '}
-          | Made by <a href="http://theweb3.ninja/">The Web3 Ninja</a>
+          | Made by <a target="blank"  href="http://theweb3.ninja/">The Web3 Ninja</a>
         </ParagraphStyled>
       </PageStyled>
       {/* <div id="popup-calendly"></div> */}
