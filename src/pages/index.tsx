@@ -5,8 +5,15 @@ import '../styles/typography.css';
 import '../styles/layout.css';
 import '../styles/thirdparty.css';
 import '../styles/spinner.css';
-import { Harsh, headingAccentStyles, headingStyles, PageStyled, ParagraphStyled, striked } from '../styled';
-
+import {
+  Harsh,
+  headingAccentStyles,
+  headingStyles,
+  PageStyled,
+  ParagraphStyled,
+  striked,
+} from '../styled';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 type StarredRepoType = {
   name: string;
@@ -47,7 +54,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Helmet title="Rocco Russo | Gatsby personal website" defer={false}>
+      <Helmet>
         <title>Rocco Russo | Gatsby personal website</title>
         {/* <link
           rel="apple-touch-icon"
@@ -160,66 +167,85 @@ const IndexPage = () => {
         </h1>
 
         <ParagraphStyled>
-          <a target="blank"  href="https://mirror.xyz/0xb0832e423881bc0371352CFDF189a3B61af1b97B" title="Visit my Blog">
+          <OutboundLink
+            target="blank"
+            href="https://mirror.xyz/0xb0832e423881bc0371352CFDF189a3B61af1b97B"
+            title="Visit my Blog"
+          >
             My Blog
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank"  href="https://github.com/xdemocle" title="Visit my GitHub profile">
+          <OutboundLink
+            target="blank"
+            href="https://github.com/xdemocle"
+            title="Visit my GitHub profile"
+          >
             GitHub
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank" 
+          <OutboundLink
+            target="blank"
             href="https://www.linkedin.com/in/roccorusso"
             title="Visit my LinkedIn profile"
           >
             LinkedIn
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank" 
+          <OutboundLink
+            target="blank"
             href="https://calendly.com/rocco-russo"
             title="Want to book 30 minute meeting with me free of charge?"
           >
             Calendly
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank" 
+          <OutboundLink
+            target="blank"
             href="https://www.meetup.com/Cape-Town-ReactJS-Meetup"
             title="Visit Cape Town ReactJS Meetup"
           >
             CT ReactJS Meetup
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank" 
+          <OutboundLink
+            target="blank"
             href="https://www.16personalities.com/profiles/cd1f69fbbefd8"
             title="Visit my ENFJ-A Assertive Protagonist profile"
           >
             ENFJ-A
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank" 
+          <OutboundLink
+            target="blank"
             href="https://twitter.com/xdemocle"
             title="Visit my Twitter profile"
           >
             Twitter
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank" 
+          <OutboundLink
+            target="blank"
             href="https://www.facebook.com/xdemocle"
             title="Visit my Facebook profile"
           >
             Facebook
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank" 
+          <OutboundLink
+            target="blank"
             href="https://instagram.com/roc_71"
             title="Visit my Instagram profile"
           >
             Instagram
-          </a>{' '}
+          </OutboundLink>{' '}
           /{' '}
-          <a target="blank"  href="https://www.twine.net/roccor" title="Twine profile">
+          <OutboundLink
+            target="blank"
+            href="https://www.twine.net/roccor"
+            title="Twine profile"
+          >
             Twine
-          </a>
+          </OutboundLink>
         </ParagraphStyled>
 
         <ParagraphStyled>
@@ -228,13 +254,15 @@ const IndexPage = () => {
           <span style={striked}>Spain</span> / South Africa /{' '}
           <span style={striked}>Malta</span> /{' '}
           <span style={striked}>Belgium</span> / HTML / CSS / JavaScript / React
-          / TypeScript / SPA / <span style={striked}>Drupal</span> /
-          Theming / CoffeeScript / SASS / Webpack / LESS / AngularJS / Web3 /
-          Blockchain / Crypto / Bitcoin / Ethereum / Templating / Vue.js / Redux
-          / GraphQL /{' '}
-          <a target="blank"  href="https://medium.com/@amitmojumder/front-end-engineer-differs-from-front-end-developer-68efe13fce7b">
+          / TypeScript / SPA / <span style={striked}>Drupal</span> / Theming /
+          CoffeeScript / SASS / Webpack / LESS / AngularJS / Web3 / Blockchain /
+          Crypto / Bitcoin / Ethereum / Templating / Vue.js / Redux / GraphQL /{' '}
+          <OutboundLink
+            target="blank"
+            href="https://medium.com/@amitmojumder/front-end-engineer-differs-from-front-end-developer-68efe13fce7b"
+          >
             Front-End Web Developer VS Front-End Web Engineer
-          </a>{' '}
+          </OutboundLink>{' '}
           / React Native / PhoneGap / Cordova /{' '}
           <Harsh>
             Don't send me e-mail about permanent positions in Holland or UK, or
@@ -242,10 +270,10 @@ const IndexPage = () => {
           </Harsh>{' '}
           Node.js / Yeoman / cross-browser / Grunt / Gulp / Client-side / Nginx
           / Apache / Comanche / Cheyenne / Sitting Bull / Next.js / Gatsby.js /{' '}
-          <span style={striked}>PHP</span> / Bull / Pizza /
-          Pasta / Mafia / Mandolino / South Italy /{' '}
+          <span style={striked}>PHP</span> / Bull / Pizza / Pasta / Mafia /
+          Mandolino / South Italy /{' '}
           <Harsh>
-            Sir, Do You Have a Moment to Talk About Jesus Christ? /
+            Sir, Do You Have OutboundLink Moment to Talk About Jesus Christ? /
           </Harsh>{' '}
           I hate seafood / Minimal Style / I hate pizza made abroad but I cannot
           avoid IT, otherwise I could become extinct / I hate ﬁsh in general / I
@@ -253,32 +281,36 @@ const IndexPage = () => {
           that far, means you don't have that much to do :P / Bower / GIT /
           GitHub / GitLab / BitBucket /{' '}
           <span className="striked removed-skill">SVN</span> /{' '}
-          <Harsh>I wrote these bullshits at 2am</Harsh> / OOP /
-          AJAX / REST / I'm Batman / Redis Cache / MongoDB / I played american
-          football in Italy and I hate who thinks rugby is better... /{' '}
+          <Harsh>I wrote these bullshits at 2am</Harsh> / OOP / AJAX / REST /
+          I'm Batman / Redis Cache / MongoDB / I played american football in
+          Italy and I hate who thinks rugby is better... /{' '}
           <Harsh>
             <span style={striked}>
-              I have a motorbike in Holland, brought from Malta and bought in
-              Sicily... still have to fix it, i'm worried cause I could run away
-              from the shitty weather
+              I have OutboundLink motorbike in Holland, brought from Malta and
+              bought in Sicily... still have to fix it, i'm worried cause I
+              could run away from the shitty weather
             </span>{' '}
           </Harsh>
-          /{' '}
-          <span>{yearBorn}</span> /{' '}
+          / <span>{yearBorn}</span> /{' '}
           <span style={striked}>Sort of Single</span> / Electronic / Power Metal
           / Punk Rock / Blues / Enduro / #endurolife / Supermotard / Supermoto /
           No limits / No excuses / Father.
           <p>
-            <a target="blank" 
+            <OutboundLink
+              target="blank"
               href="mailto:im@rocco.me?subject=Inquiry from website"
               className="hire-me"
             >
               Want to drop me an e-mail?
-            </a>
+            </OutboundLink>
             <br />
-            <a target="blank"  href="https://calendly.com/rocco-russo" className="hire-me">
+            <OutboundLink
+              target="blank"
+              href="https://calendly.com/rocco-russo"
+              className="hire-me"
+            >
               Want to book 30 minute meeting with me free of charge?
-            </a>
+            </OutboundLink>
           </p>
         </ParagraphStyled>
 
@@ -294,14 +326,14 @@ const IndexPage = () => {
           <div style={{ lineHeight: '2rem' }}>
             {starredRepos.map((repo, ix) => (
               <>
-                <a target="blank" 
+                <OutboundLink
                   href={repo.url}
                   target="_blank"
                   title={repo.description || ''}
                   key={`${repo.name}-${ix}`}
                 >
                   {repo.name}
-                </a>{' '}
+                </OutboundLink>{' '}
                 {ix + 1 !== starredRepos.length && '/ '}
               </>
             ))}
@@ -310,10 +342,17 @@ const IndexPage = () => {
 
         <ParagraphStyled>
           Hosted on{' '}
-          <a target="blank"  href="https://cloudflare.com" title="Cloudflare">
+          <OutboundLink
+            target="blank"
+            href="https://cloudflare.com"
+            title="Cloudflare"
+          >
             Cloudflare
-          </a>{' '}
-          | Made by <a target="blank"  href="http://theweb3.ninja/">The Web3 Ninja</a>
+          </OutboundLink>{' '}
+          | Made by{' '}
+          <OutboundLink target="blank" href="http://theweb3.ninja/">
+            The Web3 Ninja
+          </OutboundLink>
         </ParagraphStyled>
       </PageStyled>
       {/* <div id="popup-calendly"></div> */}
