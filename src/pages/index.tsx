@@ -201,14 +201,6 @@ const IndexPage = () => {
           /{' '}
           <OutboundLink
             target="blank"
-            href="https://www.meetup.com/Cape-Town-ReactJS-Meetup"
-            title="Visit Cape Town ReactJS Meetup"
-          >
-            CT ReactJS Meetup
-          </OutboundLink>{' '}
-          /{' '}
-          <OutboundLink
-            target="blank"
             href="https://www.16personalities.com/profiles/cd1f69fbbefd8"
             title="Visit my ENFJ-A Assertive Protagonist profile"
           >
