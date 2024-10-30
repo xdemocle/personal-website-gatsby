@@ -30,5 +30,8 @@
     "react-dom": "^18.3.1",
     "styled-components": "^6.1.13",
     "typewriter-effect": "^2.21.0"
+  },
+  "optionalDependencies": {
+    "@parcel/watcher-darwin-x64": "2.2.0"
   }
 }
