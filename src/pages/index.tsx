@@ -2,6 +2,7 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Typewriter from 'typewriter-effect';
+import Copyright from '../components/copyright';
 import {
   Harsh,
   headingAccentStyles,
@@ -15,7 +16,6 @@ import '../styles/layout.css';
 import '../styles/spinner.css';
 import '../styles/thirdparty.css';
 import '../styles/typography.css';
-import Copyright from '../components/copyright';
 
 type StarredRepoType = {
   name: string;
@@ -128,7 +128,7 @@ const IndexPage = () => {
             ENFJ-A
           </OutboundLink>{' '}
           /{' '}
-          <OutboundLink target="blank" href="https://twitter.com/xdemocle" title="Visit my X.com profile">
+          <OutboundLink target="blank" href="https://x.com/xdemocle" title="Visit my X.com profile">
             X.com
           </OutboundLink>{' '}
         </ParagraphStyled>
