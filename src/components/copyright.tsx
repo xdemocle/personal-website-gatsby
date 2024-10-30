@@ -2,7 +2,7 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import * as React from 'react';
 import { ParagraphCopyrightStyled } from '../styled';
 
-const Copyright = () => {
+export const Copyright = () => {
   return (
     <ParagraphCopyrightStyled>
       Hosted on{' '}
@@ -16,5 +16,3 @@ const Copyright = () => {
     </ParagraphCopyrightStyled>
   );
 };
-
-export default Copyright;

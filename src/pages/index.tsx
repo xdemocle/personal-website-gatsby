@@ -1,8 +1,10 @@
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import Copyright from '../components/copyright';
+import { Copyright } from '../components/copyright';
+import { Head } from '../components/head';
+import { YEAR_BORN } from '../constants';
 import {
   Harsh,
   headingAccentStyles,
@@ -24,8 +26,8 @@ type StarredRepoType = {
 };
 
 const IndexPage = () => {
-  const [loading, setLoading] = React.useState(true);
-  const [starredRepos, setStarredRepo] = React.useState<StarredRepoType[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [starredRepos, setStarredRepo] = useState<StarredRepoType[]>([]);
 
   const getStarredRepositories = async () => {
     setLoading(true);
@@ -46,25 +48,18 @@ const IndexPage = () => {
     setStarredRepo(repositories);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     getStarredRepositories();
   }, []);
 
-  const yearBorn = new Date().getFullYear() - 1982;
+  const yearBorn = new Date().getFullYear() - YEAR_BORN;
 
   return (
     <>
-      <Helmet>
-        <title>Rocco Russo | Personal website</title>
-        <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
-        <meta name="msapplication-TileColor" content="#663399" />
-        <meta name="theme-color" content="#663399" />
-      </Helmet>
+      <Head />
 
       <PageStyled>
-        <h1
-          style={headingStyles as React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>}
-        >
+        <h1 style={headingStyles as DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>}>
           Rocco Russo
           <br />
           <div style={headingAccentStyles}>
