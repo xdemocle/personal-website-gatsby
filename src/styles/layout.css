@@ -12,19 +12,18 @@ a:hover {
 }
 
 body {
-  background: url("../images/background-website_01.jpg") -20.7rem -0.1rem
-    no-repeat #fff;
-  background-size: "auto";
+  background: url('../images/background-website_01.jpg') -20.7rem -0.1rem no-repeat #fff;
+  background-size: 'auto';
   color: #232129;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-image: url("../images/background-website_02.jpg");
+    background-image: url('../images/background-website_02.jpg');
     background-color: #121212;
     color: #eee;
   }
-  
+
   a {
     color: #fec514;
   }

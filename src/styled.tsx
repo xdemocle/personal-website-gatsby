@@ -30,6 +30,32 @@ export const ParagraphStyled = styled.div`
   }
 `;
 
+export const ParagraphStarredStyled = styled.div`
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  line-height: 1.7rem;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    margin-left: 12rem;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+`;
+
+export const ParagraphCopyrightStyled = styled.div`
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.7rem;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    margin-left: 12rem;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+`;
+
 // styles
 export const headingStyles = {
   marginTop: 0,
@@ -50,6 +76,6 @@ export const striked = {
   textDecoration: 'line-through',
 };
 
-export const Harsh  = styled.span`
+export const Harsh = styled.span`
   font-style: italic;
-`
+`;

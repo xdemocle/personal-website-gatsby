@@ -6,7 +6,7 @@
   transform: rotate(45deg);
   transform-origin: 40px 40px;
 }
-  
+
 .lds-heart div {
   top: 32px;
   left: 32px;
@@ -19,7 +19,7 @@
 
 .lds-heart div:after,
 .lds-heart div:before {
-  content: " ";
+  content: ' ';
   position: absolute;
   display: block;
   width: 32px;

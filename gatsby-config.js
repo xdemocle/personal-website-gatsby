@@ -3,8 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Rocco Russo | Gatsby personal website`,
+    title: `Rocco Russo | Personal website`,
     siteUrl: `https://rocco.me`,
+    description: `Rocco Russo | Personal website`,
+    twitterUsername: `@xdemocle`,
+    image: `src/images/icon.png`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
