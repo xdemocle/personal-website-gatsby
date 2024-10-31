@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // styled
 export const PageStyled = styled.main`
@@ -76,6 +76,11 @@ export const striked = {
   textDecoration: 'line-through',
 };
 
-export const Harsh = styled.span`
+export const Harsh = styled.span<{ style?: React.CSSProperties }>`
   font-style: italic;
+  ${({ style }) =>
+    style &&
+    Object.entries(style)
+      .map(([key, value]) => `${key}: ${value};`)
+      .join(' ')}
 `;

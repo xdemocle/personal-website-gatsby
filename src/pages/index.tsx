@@ -112,7 +112,7 @@ const IndexPage = () => {
             href="https://calendar.app.google/i74EQDYJh1BopwMz9"
             title="Want to book 30 minute meeting with me free of charge?"
           >
-            Book a Meeting with Me
+            Book FREE Meeting
           </OutboundLink>{' '}
           /{' '}
           <OutboundLink
@@ -129,7 +129,7 @@ const IndexPage = () => {
         </ParagraphStyled>
 
         <ParagraphStyled>
-          Freelance / Italian / Digital Nomad /<span style={striked}>Amsterdam</span> /{' '}
+          Freelance / Italian / Digital Nomadic /<span style={striked}>Amsterdam</span> /{' '}
           <span style={striked}>Barcelona</span> / <span style={striked}>Spain</span> /{' '}
           <span style={striked}>South Africa</span> / <span style={striked}>Malta</span> /{' '}
           <span style={striked}>Belgium</span> / HTML / CSS / JavaScript / React / TypeScript / SPA /{' '}
@@ -142,28 +142,26 @@ const IndexPage = () => {
             Front-End Web Developer VS Front-End Web Engineer
           </OutboundLink>{' '}
           / React Native / PhoneGap / Cordova /{' '}
-          <Harsh>
-            Don't send me e-mail about permanent positions in Holland or UK, or I will scratch your car!!! /
-          </Harsh>{' '}
-          Node.js / Yeoman / cross-browser / Grunt / Gulp / Client-side / Nginx / Apache / Comanche / Cheyenne / Sitting
-          Bull / Next.js / Gatsby.js / <span style={striked}>PHP</span> / Bull / Pizza / Pasta / Mafia / Mandolino /
-          South Italy / <Harsh>Sir, Do You Have OutboundLink Moment to Talk About Jesus Christ? /</Harsh> I hate seafood
+          <Harsh>Don't send me e-mail about permanent positions in Holland or UK, or I will scratch your car!!!</Harsh>{' '}
+          / Node.js / Yeoman / cross-browser / Grunt / Gulp / Client-side / Nginx / Apache / Comanche / Cheyenne /
+          Sitting Bull / Next.js / Gatsby.js / <span style={striked}>PHP</span> / Bull / Pizza / Pasta / Mafia /
+          Mandolino / South Italy / <Harsh>Sir, Do You Have Moment to Talk About Jesus Christ? /</Harsh> I hate seafood
           / Minimal Style / I hate pizza made abroad but I cannot avoid IT, otherwise I could become extinct / I hate
           ﬁsh in general / I hate who hates / Sometime I hate also myself / Slowpoke / if you read that far, means you
           don't have that much to do :P / Bower / GIT / GitHub / GitLab / BitBucket /{' '}
           <span className="striked removed-skill">SVN</span> / <Harsh>I wrote these bullshits at 2am</Harsh> / OOP /
           AJAX / REST / I'm Batman / Redis Cache / MongoDB / I played american football in Italy and I hate who thinks
           rugby is better... /{' '}
-          <Harsh>
-            <span style={striked}>
-              I have OutboundLink motorbike in Holland, brought from Malta and bought in Sicily... still have to fix it,
-              i'm worried cause I could run away from the shitty weather
+          <Harsh style={striked}>
+            <span>
+              I have a motorbike in Holland, brought from Malta and bought in Sicily... still have to fix it, I'm
+              worried cause I could run away from the shitty weather
             </span>{' '}
           </Harsh>
           / <span>{yearBorn}</span> / <span style={striked}>Sort of Single</span> / Electronic / Power Metal / Punk Rock
           / Blues / Enduro / #endurolife / Supermotard / Supermoto / No limits / No excuses / Father.
           <p>
-            <OutboundLink target="blank" href="mailto:im@rocco.me?subject=Inquiry from website" className="hire-me">
+            <OutboundLink target="blank" href="mailto:im@rocco.me?subject=Inquiry from rocco.me" className="hire-me">
               Want to drop me an e-mail?
             </OutboundLink>
             <br />
